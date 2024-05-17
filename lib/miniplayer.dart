@@ -207,19 +207,11 @@ class _MiniplayerState extends State<Miniplayer> with TickerProviderStateMixin {
                         );
                       },
                       child: Material(
+                        color: Colors.transparent,
+                        surfaceTintColor: Colors.transparent,
                         child: Container(
                           constraints: BoxConstraints.expand(),
                           child: widget.builder(height, _percentage),
-                          decoration: BoxDecoration(
-                            boxShadow: <BoxShadow>[
-                              BoxShadow(
-                                  color: widget.backgroundBoxShadow,
-                                  blurRadius: widget.elevation,
-                                  offset: Offset(0.0, 4))
-                            ],
-                            color: widget.backgroundColor ??
-                                Theme.of(context).scaffoldBackgroundColor,
-                          ),
                         ),
                       ),
                     ),
